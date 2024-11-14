@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private bool _jumpPressed;
     private float _jumpYVel;
     private Rigidbody2D _rigidbody2D;
+    private Animator animator;
     private Vector3 _moveVel;
     private bool IsGrounded;
     public int max_health = 100;
@@ -19,9 +20,11 @@ public class Player : MonoBehaviour
 
 
 
+
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -53,12 +56,14 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
+            animator.SetBool("run", true);
             _moveVel = _rigidbody2D.linearVelocity;
             _moveVel.x = _moveDir * moveSpeed * Time.fixedDeltaTime * 2;
             _rigidbody2D.linearVelocity = _moveVel;
         }
         else
         {
+            animator.SetBool("run", false);
             _moveVel = _rigidbody2D.linearVelocity;
             _moveVel.x = _moveDir * moveSpeed * Time.fixedDeltaTime;
             _rigidbody2D.linearVelocity = _moveVel;
@@ -73,8 +78,10 @@ public class Player : MonoBehaviour
 
     void GetInput()
     {
-        _moveDir = Input.GetAxisRaw("Horizontal"); // takes move input
-        _jumpPressed |= Input.GetKeyDown(KeyCode.Space); // takes input for jump using space
+        _moveDir = Input.GetAxisRaw("Horizontal");
+        Debug.Log(_moveDir);
+        animator.SetFloat("speed", Mathf.Abs(_moveDir));
+        _jumpPressed |= Input.GetKeyDown(KeyCode.Space); 
     }
 
 
