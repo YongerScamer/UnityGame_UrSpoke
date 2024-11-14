@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     private bool IsGrounded;
     public int max_health = 100;
     public int health = 100;
-
+    public HealthBar healthBar;
 
 
 
@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         _moveDir = Input.GetAxisRaw("Horizontal");
         Debug.Log(_moveDir);
         animator.SetFloat("speed", Mathf.Abs(_moveDir));
-        _jumpPressed |= Input.GetKeyDown(KeyCode.Space); 
+        _jumpPressed |= Input.GetKeyDown(KeyCode.Space);
     }
 
 
@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
     public void Damage(int damage)
     {
         health -= damage;
+        healthBar.SetHealth(health);
         Debug.Log(damage);
         if (health <= 0)
         {
@@ -105,4 +106,3 @@ public class Player : MonoBehaviour
         }
     }
 }
-    

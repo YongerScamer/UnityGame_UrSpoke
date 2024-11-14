@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b3a77cff85a94dd4bb0f203e4cd23b7c
+guid: 67e514ff77a65d446aaebf81254e5b3f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5184626498779091112
-    second: "\u0421\u043A\u0440\u0438\u043D\u0448\u043E\u0442 12-11-2024 224411_0"
+      213: 4606908045521496030
+    second: Heart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0421\u043A\u0440\u0438\u043D\u0448\u043E\u0442 12-11-2024 224411_0"
+      name: Heart_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 510
-        height: 104
+        width: 13
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8a01ec0d45e73f740800000000000000
-      internalID: 5184626498779091112
+      spriteID: ed7a23e75760fef30800000000000000
+      internalID: 4606908045521496030
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u0421\u043A\u0440\u0438\u043D\u0448\u043E\u0442 12-11-2024 224411_0": 5184626498779091112
+      Heart_0: 4606908045521496030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
