@@ -166,6 +166,7 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!114 &411370205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1088,7 +1089,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7fad9ca94bd2e374cbeead1e9ce652b3, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7fad9ca94bd2e374cbeead1e9ce652b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
@@ -1408,7 +1409,7 @@ MonoBehaviour:
   audiOff: {fileID: -8325908774502027842, guid: f4830e1daedbfb344ad3316a5ffb1620, type: 3}
   buttonAudio: {fileID: 420175834}
   slider: {fileID: 894769866}
-  clip: {fileID: 8300000, guid: 7fad9ca94bd2e374cbeead1e9ce652b3, type: 3}
+  clip: {fileID: 8300000, guid: d60d1cf39bdcf334bb87640b7a5ff51f, type: 3}
   audio: {fileID: 1565651081}
 --- !u!114 &1565651080
 MonoBehaviour:
@@ -1438,8 +1439,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7fad9ca94bd2e374cbeead1e9ce652b3, type: 3}
-  m_Resource: {fileID: 8300000, guid: 7fad9ca94bd2e374cbeead1e9ce652b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d60d1cf39bdcf334bb87640b7a5ff51f, type: 3}
+  m_Resource: {fileID: 8300000, guid: d60d1cf39bdcf334bb87640b7a5ff51f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.093
   m_Pitch: 1
@@ -2290,8 +2291,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7fad9ca94bd2e374cbeead1e9ce652b3, type: 3}
-  m_Resource: {fileID: 8300000, guid: 7fad9ca94bd2e374cbeead1e9ce652b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d60d1cf39bdcf334bb87640b7a5ff51f, type: 3}
+  m_Resource: {fileID: 8300000, guid: d60d1cf39bdcf334bb87640b7a5ff51f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2393,7 +2394,7 @@ MonoBehaviour:
   audiOff: {fileID: -8325908774502027842, guid: f4830e1daedbfb344ad3316a5ffb1620, type: 3}
   buttonAudio: {fileID: 420175834}
   slider: {fileID: 894769866}
-  clip: {fileID: 8300000, guid: 7fad9ca94bd2e374cbeead1e9ce652b3, type: 3}
+  clip: {fileID: 8300000, guid: d60d1cf39bdcf334bb87640b7a5ff51f, type: 3}
   audio: {fileID: 2062495834}
 --- !u!1 &2109238760
 GameObject:
