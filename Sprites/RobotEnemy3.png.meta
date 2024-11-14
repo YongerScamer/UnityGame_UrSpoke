@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      RobotEnemy3_0: -3190084648510876065
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

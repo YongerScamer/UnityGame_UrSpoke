@@ -21,7 +21,7 @@ public class Shot : MonoBehaviour
         Debug.Log("pupu");
         if (collision.gameObject.tag == "Floor")
         {
-            collide = true;
+            
         }
     }
 }
