@@ -79,7 +79,6 @@ public class Player : MonoBehaviour
     void GetInput()
     {
         _moveDir = Input.GetAxisRaw("Horizontal");
-        Debug.Log(_moveDir);
         animator.SetFloat("speed", Mathf.Abs(_moveDir));
         _jumpPressed |= Input.GetKeyDown(KeyCode.Space); 
     }

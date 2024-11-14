@@ -34,8 +34,11 @@ public class FPV : MonoBehaviour
                 Destroy(animator);
                 die = true;
             }
-            agent.SetDestination(player.transform.position);
-            transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+            else
+            {
+                agent.SetDestination(player.transform.position);
+                transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+            }
         }
     }
 }
