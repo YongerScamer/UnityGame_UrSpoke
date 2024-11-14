@@ -10,6 +10,7 @@ public class FPV : MonoBehaviour
     Rigidbody2D rig;
     bool die;
     Animator animator;
+    public int health = 20;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -39,6 +40,15 @@ public class FPV : MonoBehaviour
                 agent.SetDestination(player.transform.position);
                 transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
             }
+        }
+    }
+    public void Damage(int damage)
+    {
+        health -= damage;
+        Debug.Log(damage);
+        if (health <= 0)
+        {
+            Debug.Log("Ћох умер");
         }
     }
 }

@@ -43,4 +43,13 @@ public class Robot : MonoBehaviour
         }
 
     }
+    public void Damage(int damage)
+    {
+        health -= damage;
+        Debug.Log(damage);
+        if (health <= 0)
+        {
+            Debug.Log("Ћох умер");
+        }
+    }
 }
