@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class movePlayer : MonoBehaviour
+public class Player : MonoBehaviour
 {
 
 
@@ -14,6 +14,8 @@ public class movePlayer : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
     private Vector3 _moveVel;
     private bool IsGrounded;
+    public int max_health = 100;
+    public int health = 100;
 
 
 
@@ -84,6 +86,16 @@ public class movePlayer : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other)
     {
         IsGrounded = false;
+    }
+
+    public void Damage(int damage)
+    {
+        health -= damage;
+        Debug.Log(damage);
+        if (health <= 0)
+        {
+            Debug.Log("Ћох умер");
+        }
     }
 }
     
