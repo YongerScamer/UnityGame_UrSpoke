@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -102,7 +103,8 @@ public class Player : MonoBehaviour
         Debug.Log(damage);
         if (health <= 0)
         {
-            Debug.Log("Ћох умер");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Time.timeScale = 1.0f;
         }
     }
 
