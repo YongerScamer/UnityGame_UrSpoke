@@ -34,6 +34,7 @@ public class FPV : MonoBehaviour
                 Destroy(agent);
                 Destroy(animator);
                 die = true;
+                EnemyCount.enemys += 1;
             }
             else
             {
