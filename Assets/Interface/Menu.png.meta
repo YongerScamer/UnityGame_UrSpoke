@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aa49a8c96ba72344690c6d54032cd79b
+guid: 7afd9851a1872094a94ab3274640e087
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5260506346123122657
-    second: dron1_0
+      213: -198938125430884413
+    second: Menu_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dron1_0
+      name: Menu_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 120
-        height: 70
+        width: 64
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f18a4ac795deef6b0800000000000000
-      internalID: -5260506346123122657
+      spriteID: 3c7f86534da3d3df0800000000000000
+      internalID: -198938125430884413
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dron1_0: -5260506346123122657
+      Menu_0: -198938125430884413
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

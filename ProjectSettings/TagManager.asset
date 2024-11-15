@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - FPV
+  - Robot
   layers:
   - Default
   - TransparentFX

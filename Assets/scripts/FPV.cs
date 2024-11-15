@@ -30,9 +30,10 @@ public class FPV : MonoBehaviour
             if ((transform.position - player.transform.position).magnitude < 3)
             {
                 player.Damage(20);
-                rig.gravityScale = 1;
+                rig.gravityScale = 3;
                 Destroy(agent);
                 Destroy(animator);
+                GetComponent<Rigidbody>().freezeRotation = false;
                 die = true;
                 EnemyCount.enemys += 1;
             }
@@ -49,10 +50,12 @@ public class FPV : MonoBehaviour
         Debug.Log(damage);
         if (health <= 0)
         {
-            rig.gravityScale = 1;
+            rig.gravityScale = 3;
             Destroy(agent);
             Destroy(animator);
+            GetComponent<Rigidbody>().freezeRotation = false;
             die = true;
+            EnemyCount.enemys += 1;
         }
     }
 }

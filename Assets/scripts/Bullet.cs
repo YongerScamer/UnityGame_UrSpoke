@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float timeDestroy = 3f;
+    public float timeDestroy = 1f;
     public float speed = 3f;
     public Rigidbody2D rb;
 
@@ -29,6 +29,13 @@ public class Bullet : MonoBehaviour
         {
             Debug.Log("Goida");
             collision.gameObject.GetComponent<FPV>().Damage(20);
+            Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag == "Robot")
+        {
+            Debug.Log("Goida");
+            collision.gameObject.GetComponent<Robot>().Damage(20);
+            Destroy(this.gameObject);
         }
     }
 }
