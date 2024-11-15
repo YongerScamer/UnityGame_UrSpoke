@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     public int max_health = 100;
     public int health = 100;
     public HealthBar healthBar;
+    public Bullet bullet;
 
 
 
@@ -30,13 +32,11 @@ public class Player : MonoBehaviour
     private void Update()
     {
         GetInput();
-    }
-
-    private void FixedUpdate()
-    {
         Move();
         HandleJump();
+        Shot();
     }
+
 
     private void HandleJump()
     {
@@ -86,12 +86,14 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
+        if(col.gameObject.tag == "Floor" || col.gameObject.tag == "FPV" || col.gameObject.tag == "Robot")
         IsGrounded = true;
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        IsGrounded = false;
+        if (other.gameObject.tag == "Floor" || other.gameObject.tag == "FPV" || other.gameObject.tag == "Robot")
+            IsGrounded = false;
     }
 
     public void Damage(int damage)
@@ -101,7 +103,17 @@ public class Player : MonoBehaviour
         Debug.Log(damage);
         if (health <= 0)
         {
-            Debug.Log("Ћох умер");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Time.timeScale = 1.0f;
+        }
+    }
+
+    private void Shot()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Pop");
+            Instantiate(bullet, transform.position, new Quaternion(0f, 0f, 0f, 0f));
         }
     }
 }

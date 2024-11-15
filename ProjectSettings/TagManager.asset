@@ -5,16 +5,19 @@ TagManager:
   serializedVersion: 3
   tags:
   - Floor
+  - FPV
+  - Robot
   - Enemy
+  - Walls
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Floor
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Bullet
   - 
   - 
   - 
