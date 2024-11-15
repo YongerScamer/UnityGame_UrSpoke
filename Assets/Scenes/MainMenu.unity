@@ -337,7 +337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8705920406345092168, guid: cf5a2cbb90a3e964883089d12e70fe78, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c3db2e9e9d5459a4785078d3ef1c7972, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -371,8 +371,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -429, y: 41}
-  m_SizeDelta: {x: 98.02, y: 65.42}
+  m_AnchoredPosition: {x: -428.08997, y: 44.971}
+  m_SizeDelta: {x: 151.58, y: 89.942}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519420028
 GameObject:
@@ -2447,8 +2447,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acef332c6d8abd4c8c0f7cc64e97b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audiOn: {fileID: -8705920406345092168, guid: cf5a2cbb90a3e964883089d12e70fe78, type: 3}
-  audiOff: {fileID: -8325908774502027842, guid: f4830e1daedbfb344ad3316a5ffb1620, type: 3}
+  audiOn: {fileID: 21300000, guid: c3db2e9e9d5459a4785078d3ef1c7972, type: 3}
+  audiOff: {fileID: 21300000, guid: 9ec5c4ed3f63c7e489db6b0a8e3ad273, type: 3}
   buttonAudio: {fileID: 420175834}
   slider: {fileID: 894769866}
   clip: {fileID: 8300000, guid: d60d1cf39bdcf334bb87640b7a5ff51f, type: 3}
