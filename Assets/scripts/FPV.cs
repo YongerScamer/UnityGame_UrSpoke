@@ -48,7 +48,10 @@ public class FPV : MonoBehaviour
         Debug.Log(damage);
         if (health <= 0)
         {
-            Debug.Log("Ћох умер");
+            rig.gravityScale = 1;
+            Destroy(agent);
+            Destroy(animator);
+            die = true;
         }
     }
 }
