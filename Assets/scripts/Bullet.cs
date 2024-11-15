@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float timeDestroy = 1f;
+    public float timeDestroy = 0.3f;
     public float speed = 3f;
     public Rigidbody2D rb;
 
@@ -35,6 +35,10 @@ public class Bullet : MonoBehaviour
         {
             Debug.Log("Goida");
             collision.gameObject.GetComponent<Robot>().Damage(20);
+            Destroy(this.gameObject);
+        }
+        else
+        {
             Destroy(this.gameObject);
         }
     }

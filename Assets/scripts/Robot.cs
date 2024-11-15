@@ -12,6 +12,11 @@ public class Robot : MonoBehaviour
     private Vector3 _moveVel;
     bool die = false;
     public GameObject trash;
+    public int PerShot = 10;
+    int time = 0;
+    public RobotBullet bullet;
+    public GameObject Rshot_pos;
+    public GameObject Lshot_pos;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -22,9 +27,7 @@ public class Robot : MonoBehaviour
     {
         if (!die)
         {
-            {
-
-            }
+            Shoting();
             if (Rground.collide)
             {
                 orientation = false;
@@ -61,8 +64,25 @@ public class Robot : MonoBehaviour
             if (health <= 0)
             {
                 Instantiate(trash, transform.position, new Quaternion(0f, 0f, 0f, 0f));
+                EnemyCount.enemys += 1;
                 Destroy(this.gameObject);
                 die = true;
+            }
+        }
+    }
+    private void Shoting()
+    {
+        time = (time + 1) % PerShot;
+        Debug.Log(time);
+        if (time == 0)
+        {
+            if (orientation) 
+            {
+                Instantiate(bullet, Rshot_pos.transform.position, Quaternion.Euler(0f, 0f, -90f));
+            }   
+            else
+            {
+                Instantiate(bullet, Lshot_pos.transform.position, Quaternion.Euler(0f, 0f, 90f));
             }
         }
     }

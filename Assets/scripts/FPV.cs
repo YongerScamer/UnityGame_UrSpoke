@@ -8,7 +8,6 @@ public class FPV : MonoBehaviour
     NavMeshAgent agent;
     Player player;
     Rigidbody2D rig;
-    bool die;
     Animator animator;
     public int health = 20;
     void Start()
@@ -19,23 +18,21 @@ public class FPV : MonoBehaviour
         player = FindAnyObjectByType<Player>();
         rig = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        die = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!die)
+        if (health > 0)
         {
             if ((transform.position - player.transform.position).magnitude < 3)
             {
+                health = 0;
                 player.Damage(20);
                 rig.gravityScale = 3;
                 Destroy(agent);
                 Destroy(animator);
                 GetComponent<Rigidbody>().freezeRotation = false;
-                die = true;
-                EnemyCount.enemys += 1;
             }
             else
             {
@@ -46,16 +43,18 @@ public class FPV : MonoBehaviour
     }
     public void Damage(int damage)
     {
-        health -= damage;
-        Debug.Log(damage);
-        if (health <= 0)
+        if (health > 0)
         {
-            rig.gravityScale = 3;
-            Destroy(agent);
-            Destroy(animator);
-            GetComponent<Rigidbody>().freezeRotation = false;
-            die = true;
-            EnemyCount.enemys += 1;
+            health -= damage;
+            Debug.Log(damage);
+            if (health <= 0)
+            {
+                rig.gravityScale = 3;
+                EnemyCount.enemys += 1;
+                Destroy(agent);
+                Destroy(animator);
+                GetComponent<Rigidbody>().freezeRotation = false;
+            }
         }
     }
 }
