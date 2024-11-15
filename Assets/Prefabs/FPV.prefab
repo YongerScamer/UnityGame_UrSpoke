@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d3157183008d6245969c6c3e53d304b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explotion: {fileID: 6625685058711265352, guid: f39330ed36e9f014b9d91a08b096b44b, type: 3}
   health: 20
 --- !u!195 &5479582844517074344
 NavMeshAgent:

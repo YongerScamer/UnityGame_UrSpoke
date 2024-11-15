@@ -444,6 +444,7 @@ MonoBehaviour:
   Rground: {fileID: 283189513034710811}
   Lground: {fileID: 8295006806779606725}
   trash: {fileID: 4720986343267044234, guid: 603a745e169352e489c6894f48a85b8c, type: 3}
+  explotion: {fileID: 6625685058711265352, guid: f39330ed36e9f014b9d91a08b096b44b, type: 3}
   PerShot: 400
   bullet: {fileID: 5089322085894729590, guid: 818eecd2b5739fd4cb662c413cdc4ff2, type: 3}
   Rshot_pos: {fileID: 2400954761796226386}

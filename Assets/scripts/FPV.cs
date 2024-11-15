@@ -7,6 +7,7 @@ public class FPV : MonoBehaviour
 
     NavMeshAgent agent;
     Player player;
+    public Explotion explotion;
     Rigidbody2D rig;
     Animator animator;
     public int health = 20;
@@ -27,12 +28,11 @@ public class FPV : MonoBehaviour
         {
             if ((transform.position - player.transform.position).magnitude < 3)
             {
+                Instantiate(explotion, transform.position, Quaternion.Euler(0f, 0f, 0f));
                 health = 0;
                 player.Damage(20);
                 rig.gravityScale = 3;
-                Destroy(agent);
-                Destroy(animator);
-                GetComponent<Rigidbody>().freezeRotation = false;
+                Destroy(this.gameObject);
             }
             else if ((transform.position - player.transform.position).magnitude < 50)
             {
@@ -49,6 +49,8 @@ public class FPV : MonoBehaviour
             Debug.Log(damage);
             if (health <= 0)
             {
+                Instantiate(explotion, transform.position, Quaternion.Euler(0f, 0f, 0f));
+                Destroy(this.gameObject);
                 rig.gravityScale = 3;
                 EnemyCount.enemys += 1;
                 Destroy(agent);

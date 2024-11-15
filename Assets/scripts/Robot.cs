@@ -12,6 +12,7 @@ public class Robot : MonoBehaviour
     private Vector3 _moveVel;
     bool die = false;
     public GameObject trash;
+    public Explotion explotion;
     public int PerShot = 10;
     int time = 0;
     public RobotBullet bullet;
@@ -64,6 +65,7 @@ public class Robot : MonoBehaviour
             if (health <= 0)
             {
                 Instantiate(trash, transform.position, new Quaternion(0f, 0f, 0f, 0f));
+                Instantiate(explotion, transform.position, Quaternion.Euler(0f, 0f, 0f));
                 EnemyCount.enemys += 1;
                 Destroy(this.gameObject);
                 die = true;
