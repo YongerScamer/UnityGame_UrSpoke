@@ -17,7 +17,7 @@ public class Coll : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("pupu");
-        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "FPV" || collision.gameObject.tag == "Robot")
+        if (collision.gameObject.tag == "Floor" || collision.gameObject.tag == "FPV" || collision.gameObject.tag == "Robot" || collision.gameObject.tag == "Walls")
         {
             collide = true;
         }

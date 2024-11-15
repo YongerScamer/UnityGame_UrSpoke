@@ -85,12 +85,14 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
+        if(col.gameObject.tag == "Floor" || col.gameObject.tag == "FPV" || col.gameObject.tag == "Robot")
         IsGrounded = true;
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        IsGrounded = false;
+        if (other.gameObject.tag == "Floor" || other.gameObject.tag == "FPV" || other.gameObject.tag == "Robot")
+            IsGrounded = false;
     }
 
     public void Damage(int damage)

@@ -34,7 +34,7 @@ public class FPV : MonoBehaviour
                 Destroy(animator);
                 GetComponent<Rigidbody>().freezeRotation = false;
             }
-            else
+            else if ((transform.position - player.transform.position).magnitude < 50)
             {
                 agent.SetDestination(player.transform.position);
                 transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
