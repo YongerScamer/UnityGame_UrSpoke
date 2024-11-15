@@ -61,7 +61,6 @@ public class Robot : MonoBehaviour
         if (!die)
         {
             health -= damage;
-            Debug.Log(damage);
             if (health <= 0)
             {
                 Instantiate(trash, transform.position, new Quaternion(0f, 0f, 0f, 0f));
@@ -75,7 +74,6 @@ public class Robot : MonoBehaviour
     private void Shoting()
     {
         time = (time + 1) % PerShot;
-        Debug.Log(time);
         if (time == 0)
         {
             if (orientation) 

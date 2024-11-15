@@ -50,6 +50,7 @@ public class FPV : MonoBehaviour
             if (health <= 0)
             {
                 Instantiate(explotion, transform.position, Quaternion.Euler(0f, 0f, 0f));
+                Debug.Log("destroy");
                 Destroy(this.gameObject);
                 rig.gravityScale = 3;
                 EnemyCount.enemys += 1;

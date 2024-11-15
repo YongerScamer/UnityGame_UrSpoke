@@ -1,3 +1,4 @@
+using TMPro.Examples;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -25,15 +26,15 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "FPV")
         {
-            Debug.Log("Goida");
+            Debug.Log("Collision");
             collision.gameObject.GetComponent<FPV>().Damage(20);
             Destroy(this.gameObject);
         }
         if (collision.gameObject.tag == "Robot")
         {
-            Debug.Log("Goida");
             collision.gameObject.GetComponent<Robot>().Damage(20);
             Destroy(this.gameObject);
         }
